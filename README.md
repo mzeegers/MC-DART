@@ -1,7 +1,7 @@
 # <a href="https://link.springer.com/chapter/10.1007/978-3-030-05288-1_13" style="color: black;">MC-DART</a>: Multi-channel tomographic reconstruction with Multi-Channel DART
 
    <p align="center">
-   <img src="./images/FlowChartMCDARTv5.svg" style="width: 100%" >
+   <img src="./images/FlowChartMCDARTv5.svg" style="width: 90%" >
     </p>
     
 ## Introduction
