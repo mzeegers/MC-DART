@@ -10,7 +10,7 @@ from HelperFunctions import *
 
 np.set_printoptions(suppress=True)
 
-def NonDartRec(Ph, NAngles, ARM, Startit, Evalit, ARMit, channels, materials, DiscMaterialChannel, addNoise = False, noiseInt = 100, ROI = None, Statistics = False):
+def NonDartRec(Ph, NAngles, ARM, Startit, Evalit, ARMit, channels, materials, DiscMaterialSpectra, addNoise = False, noiseInt = 100, ROI = None, Statistics = False):
     
     #Number of evaluation points for statistics
     EvalMoments = int(ARMit/Evalit) + 1
@@ -64,7 +64,7 @@ def NonDartRec(Ph, NAngles, ARM, Startit, Evalit, ARMit, channels, materials, Di
 
             recs[idx,:,:] = rec
 
-        seg = channelSegmentation(Ph, recs, DiscMaterialChannel)
+        seg = channelSegmentation(Ph, recs, DiscMaterialSpectra)
         pixelerror = pixelError(Ph.MatArr, seg, ROI)
         print("PixelError 2D seg in evaluation iteration", evalit, ":", pixelerror)
         

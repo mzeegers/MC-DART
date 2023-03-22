@@ -8,10 +8,10 @@ import numpy as np
 import random
 
 #Assigns for every channel a random attenuation value to a material between 0 and 1
-def makeRandomDiscMaterialChannel(materials, channels):
-    DiscMaterialChannel = np.random.rand(materials, channels)     #Random between 0 and 1
-    DiscMaterialChannel[0,:] = np.zeros(channels)
-    return DiscMaterialChannel
+def makeRandomDiscMaterialSpectra(materials, channels):
+    DiscMaterialSpectra = np.random.rand(materials, channels)     #Random between 0 and 1
+    DiscMaterialSpectra[0,:] = np.zeros(channels)
+    return DiscMaterialSpectra
 
 def pixelError(Ground, Res, ROI = None):
     if(ROI is None):
@@ -28,10 +28,10 @@ def createPhantomAtChannel(Ph, channel, materials, SegArray):
             AttProf += ConcProfile*[tup for tup in Ph.AttenuationSpectra if tup[0] == i][0][4](channel)
     return AttProf
 
-def channelSegmentation(Ph, recs, DiscMaterialChannel):
-    nomaterials = DiscMaterialChannel.shape[0]
+def channelSegmentation(Ph, recs, DiscMaterialSpectra):
+    nomaterials = DiscMaterialSpectra.shape[0]
     mDiff = np.zeros((nomaterials, Ph.M, Ph.N))
-    for i, m in enumerate(DiscMaterialChannel): 
+    for i, m in enumerate(DiscMaterialSpectra): 
         temp = recs
         temp = temp.swapaxes(0,2)
         temp = temp.swapaxes(0,1)

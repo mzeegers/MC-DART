@@ -11,7 +11,7 @@ from HelperFunctions import *
 np.set_printoptions(suppress=True)
 
 
-def MCDART(Ph, r, b, NAngles, ARM, Startit, MCDARTit, ARMit, FixProb, channels, materials, DiscMaterialChannel, addNoise = False, noiseInt = 100, ROI = None, Statistics = False, Smoothing = False):
+def MCDART(Ph, r, b, NAngles, ARM, Startit, MCDARTit, ARMit, FixProb, channels, materials, DiscMaterialSpectra, addNoise = False, noiseInt = 100, ROI = None, Statistics = False, Smoothing = False):
     
     #Prepare arrays that track statistics
     if(Statistics):
@@ -66,7 +66,7 @@ def MCDART(Ph, r, b, NAngles, ARM, Startit, MCDARTit, ARMit, FixProb, channels, 
         recs[idx,:,:] = rec
 
     #Create a combined channel segmentation
-    seg = channelSegmentation(Ph, recs, DiscMaterialChannel)
+    seg = channelSegmentation(Ph, recs, DiscMaterialSpectra)
     pixelerror = pixelError(Ph.MatArr, seg, ROI)
     print("PixelError 2D seg", pixelerror)
 
@@ -148,7 +148,7 @@ def MCDART(Ph, r, b, NAngles, ARM, Startit, MCDARTit, ARMit, FixProb, channels, 
             CurRecs[idx,:,:] = M
     
         #Segmentation
-        seg = channelSegmentation(Ph, CurRecs, DiscMaterialChannel)
+        seg = channelSegmentation(Ph, CurRecs, DiscMaterialSpectra)
         
         pixelerror = pixelError(Ph.MatArr, seg, ROI)
         print("PixelError 2D seg after MC-DART iteration", mcdart, ":", pixelerror)

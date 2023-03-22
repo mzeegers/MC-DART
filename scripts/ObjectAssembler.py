@@ -20,7 +20,7 @@ class Phantom(object):
       self.Labels = [] #Label-material combinations
    
       self.AttenuationSpectra = [] #List containing all relevant attenuation spectrum functions (constructed on the fly)
-                           #Contains tuples of the form (AtomicNumber, Name, EnergyData, AttenuationData, InterpolationFunction) 
+                           #Contains tuples of the form (AtomicNumber, Name, ChannelData, AttenuationData, InterpolationFunction) 
       if Filename is not None:
          self.PhantomName = Filename
 

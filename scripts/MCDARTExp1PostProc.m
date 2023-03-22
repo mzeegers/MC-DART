@@ -1,4 +1,4 @@
-%Plotting of the results of the second experiment for the MC-DART paper
+%Plotting of the results of the first experiment for the MC-DART paper
 %Author,
 %   Mathé Zeegers, 
 %       Centrum Wiskunde & Informatica, Amsterdam (m.t.zeegers@cwi.nl)
@@ -11,7 +11,7 @@ sC = 10
 Cum = zeros(sM-1,sC);
 for run = 1:100
     run
-    FILE = strcat('../results/MCDARTMaterialChannelExp/ExpNAngles32ARMSIRT_CUDAStart10DART10ARM10Fix0.99/PixelErrors/pixelErrorRun', int2str(run), '.txt')
+    FILE = strcat('../results/MCDARTMaterialChannelExp/ExpNAngles32ARMSIRT_CUDAStart10MCDART10ARM10Fix0.99/PixelErrors/pixelErrorRun', int2str(run), '.txt')
     T = textread(FILE);
     Cum  = Cum + T;
 end
