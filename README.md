@@ -6,7 +6,9 @@
     
 ## Introduction
 
-...
+MC-DART (Multi-Channel Discrete Algebraic Reconstruction Technique) is a tomographic reconstruction algorithm for multi-channel data. The algorithm is a generalization of DART to multi-channel data and alternately applies channel reconstructions and multi-channel segmentation to yield a final reconstructed segmentation. 
+
+This package provides scripts for applying MC-DART with simulated X-ray data. In addition, the package provides scripts to reproduce the results of the experiments in the associated paper titled '[A Multi-Channel DART Algorithm](https://link.springer.com/chapter/10.1007/978-3-030-05288-1_13)', in which the reconstruction mathod is demonstrated and analyzed on numerical 2D X-ray phantoms.
 
 ## Requirements
 
@@ -50,7 +52,7 @@ The resulting plots (see examples below) will be located /results/plots folder. 
 
 ## Example results
 
-Below are data samples and the results of the MC-DART experiments:
+Below are data samples and the results of the MC-DART experiments. On the left are two phantoms (with two and ten materials respectively) are used. The plots on the upper right show the relative pixel classification errors in the final segmentations of MC-DART as the number of channels and materials are varied. The plot on the lower right show the pixel classification error over the number of reconstruction algorithm iterations.
 
    <p align="center">
    <img align=center src="./images/Nx128Nclass50Nchan1run1CONVERTEDmat2.png" style="width: 25%">
@@ -60,8 +62,6 @@ Below are data samples and the results of the MC-DART experiments:
    <img align=center src="./images/Nx128Nclass50Nchan1run1CONVERTEDmat10.png" style="width: 25%">
    <img align=center src="./images/EXP2PixelErrorOverTime.png" style="width: 50%">
    </p>
-
-...
 
 ## References
 
