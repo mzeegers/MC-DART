@@ -10,7 +10,17 @@
 
 ## Requirements
 
-...
+The code requires Python and MATLAB (r2020 and above recommended) to run. It also requires the following packages:
+
+**Major**:
+ASTRA Toolbox:
+https://github.com/astra-toolbox/astra-toolbox
+
+Minor (but essential):
+numpy, pylab, scipy, tifffile
+
+The code has been tested with Python version 3.6.10 on Fedora 36, with Intel(R) Core(TM) i7-7700K CPU, GeForce GTX 1070 GPU, CUDA version 11.8 and CUDA toolkit 10.1.243.
+
 
 ## Scripts
 
@@ -36,11 +46,20 @@ To reproduce the results in the [paper](https://link.springer.com/chapter/10.100
 - **Section 4, Fig. 4 and 5:** Run the MCDARTExp1Runs.sh scripts to generate the results and MCDARTExp1PostProc.m to generate the plots.
 - **Section 4, Fig. 6**: Run the MCDARTExp2DARTRuns.sh and MCDARTExp2NoDARTRuns.sh scripts to generate the results and MCDARTExp2PostProc.m to generate the plots.
 
-The resulting plots (see examples below) will be located /results/plots folder. The results may differ slightly since in the original scripts no fixed seeds are used.
+The resulting plots (see examples below) will be located /results/plots folder. The results may differ slightly since in the original scripts no fixed seeds were used.
 
 ## Example results
 
 Below are data samples and the results of the MC-DART experiments:
+
+   <p align="center">
+   <img src="./images/Nx128Nclass50Nchan1run1CONVERTEDmat2.png" style="width: 40%">
+   <img src="./images/EXP1PixelErrorOverMaterialsandChannels.png" style="width: 40%">
+   </p>
+   <p align="center">
+   <img src="./images/Nx128Nclass50Nchan1run1CONVERTEDmat10.png" style="width: 40%">
+   <img src="./images/EXP2PixelErrorOverTime.png" style="width: 40%">
+   </p>
 
 ...
 
