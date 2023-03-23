@@ -53,12 +53,12 @@ The resulting plots (see examples below) will be located /results/plots folder. 
 Below are data samples and the results of the MC-DART experiments:
 
    <p align="center">
-   <img align=top src="./images/Nx128Nclass50Nchan1run1CONVERTEDmat2.png" style="width: 25%">
-   <img align=top src="./images/EXP1PixelErrorOverMaterialsandChannels.png" style="width: 50%">
+   <img align=center src="./images/Nx128Nclass50Nchan1run1CONVERTEDmat2.png" style="width: 25%">
+   <img align=center src="./images/EXP1PixelErrorOverMaterialsandChannels.png" style="width: 50%">
    </p>
    <p align="center">
-   <img align=top src="./images/Nx128Nclass50Nchan1run1CONVERTEDmat10.png" style="width: 25%">
-   <img align=top src="./images/EXP2PixelErrorOverTime.png" style="width: 50%">
+   <img align=center src="./images/Nx128Nclass50Nchan1run1CONVERTEDmat10.png" style="width: 25%">
+   <img align=center src="./images/EXP2PixelErrorOverTime.png" style="width: 50%">
    </p>
 
 ...
